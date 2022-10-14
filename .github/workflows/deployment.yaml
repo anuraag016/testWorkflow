@@ -33,7 +33,7 @@ jobs:
         with:
           repoName: anuraag016/TestTemplateEngine 
           branchName: master
-          data: '{ "message" : ${{ steps.local-event-generator.outputs.GITHUB_EVENT_LOCAL }} }'
+          data: '{ "message" : ${{ steps.local-event-generator.outputs.GITHUB_EVENT_LOCAL }}, "run_id": ${{ github.run_id }} }'
           transformerInSameRepo: false
           templateType: HandleBars
           sourceType: Test
