@@ -32,7 +32,7 @@ jobs:
         uses: ProtocolRedefined/Dynamic-Template-Engine@anuraag016/testhelpers
         with:
           repoName: anuraag016/TestTemplateEngine 
-          branchName: main
+          branchName: master
           data: '{ "message" : ${{ steps.local-event-generator.outputs.GITHUB_EVENT_LOCAL }} }'
           transformerInSameRepo: false
           templateType: HandleBars
