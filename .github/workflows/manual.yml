@@ -20,9 +20,12 @@ on:
 jobs:
   # This workflow contains a single job called "greet"
   greet:
+    strategy:
+      matrix: 
+        test: [abc,bbc,ccd]
     # The type of runner that the job will run on
     uses: ./.github/workflows/reusable.yml
     with:
-      username: mona
+      username: ${{ matrix.test }}
     secrets:
       somesecret: 'test'
